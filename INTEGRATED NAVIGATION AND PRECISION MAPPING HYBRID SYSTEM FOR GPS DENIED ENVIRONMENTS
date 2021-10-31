@@ -1,0 +1,209 @@
+INTEGRATED NAVIGATION AND PRECISION MAPPING HYBRID SYSTEM FOR GPS DENIED ENVIRONMENTS
+
+Abstract # Introduction # Competing Technologies # Requirement Analysis #Working Principle and Design # Algorithm Design Analysis # Applications #Conclusion # Future Scope
+
+Abstract
+
+Military Applications require accurate tracking, positioning and mapping the terrain precisely for faultless operations. This paper proposes A Hybrid System of Navigation technology which involves the features of the Inertial Navigation System in combination with the GPS based tracking supported with the add on machine vision system provided by the high speed camera tracker further complimented with Lidar Technology. Lapse of signals by the GPS based systems or faulty signals by the GPS based devices pose a huge risk in the areas of Navigational Integrity. This Paper proposes an Integrated Hybrid Navigation System which is robust and fail proof in the GPS denied environments for precise mapping of terrains. The Algorithm combines the inputs from different modules to provide a robust and accurate terrain mapping solution. The Hybrid System framework combines vision aided navigational mapping with/without GPS signals.
+
+Keywords: LiDAR; Scanning; Autonomous Navigation; GPS; Vision Systems; Algorithm, Navigation, Hybrid System
+
+Introduction
+
+A Navigation system is a directing system on a vehicle, a localised or remote location which aids in navigation either directly or indirectly using communication signals on board or off board. There have been various types of Navigation Systems across the globe prominent ones being the GPS based systems, INS systems, Lidar systems etc. Each system has its own set of Pros and Cons, however, in this paper, an efficient and robust Navigation System is proposed which combines the best features and characteristics of the Lidar based systems combined with Inertial Navigation systems with the further add on tracker system with a hybrid Algorithm for fail proof operations in the terrains of low visibility and GPS denied/restricted environments. The Limitations posed by each of the systems can be complemented by using an integrated system design to combine the features to provide high integrity navigational solution for manned/unmanned aircrafts in terrains of high risks. The conceptual design of a two-axis Lidar positioning system mainly consists of mounting structures cum housings of azimuth & elevation rotational systems and Drive mechanisms. The azimuth & elevation mounting structures shall house drive modules, low friction bearings, feedback sensors and electro-mechanical brake along with high Speed Tracker system with the capabilities of Night Vision. The azimuth housing shall also accommodate slip ring/rotary joint assembly as a central component to cater for the electrical, communication & RF needs of the rotating payload and drive modules along with control electronics. The elevation mounting structure will have provisions for fitting the module on the front side and the package of Circulator on the rear side of the Assembly with the help of suitable brackets for mechanical sturdiness. The Mathematical Modelling has to be analysed using the State Space Vector Analysis for the steady state and stable performance of the system.
+
+Competing Technologies
+
+Inertial Navigation Systems
+
+INS uses the onboard computer, motion sensors to calculate the position and speed of the object and this type of system is averse to the jamming risks posed in the techniques of navigation. With advances in technology, the INS based systems have become more precise and less bulky with MEMS based devices. However, the integration errors are of huge consequence when it gets accumulated over time. The result of such accumulated errors gets compounded over time and leads to fatal disasters.
+
+GPS based systems
+
+A GPS Device works with the help of satellites to provide exact location and time services at any point of time and location. The conglomerate of satellites initially started by US govt for the military warfare requirements further was extended for the rest of the world. However, the nations across the globe are in the process of making their space self sufficient to address the need of positioning at critical times which can be denied or incorrectly given by the founding nations to be at the forefront. Example of denied services is during the Kargil War 1999. This system which can be used reliably when there are GPS signals adequately available, but in the places where signals are weak or denied environments, the navigation system faces a setback. To address the issue, there can be a cognitive solution which makes use of the GPS module assisted INS system for better performance and efficiency.
+
+Lidar System
+
+Lidar stands for the acronym Light Detection and Ranging. The process uses laser Beam to hit the target and calculate the time required for the pulse to return back to calculate the position and map the terrain. This scanning technique creates the general contour of the environment for mapping applications. Lidar provides accurate mapping solutions when the GPS system suffers from jamming and multipath problems. The Lidar system can complement the loopholes of the GPS based system combined with INS system for optimum performance when built as an integrated system.
+
+Requirements Analysis
+
+From the user and functional requirements, the following observations can be made:
+
+§ Interface Requirement for the System
+
+§ A Digital to Analogue Converter (DAC) must be built to change the digital signal from the computer port to an analogue voltage.        
+
+§ The control circuitry must use this voltage to control the speed of the motor/actuator
+
+§ Speed control to be implemented using suitable technique.
+
+§ The input to the control hardware must also be able change the mode of operation.
+
+§ The system must be interfaced with the computer through plug and play or remote terminal interface
+
+§ Controller Design for 4 modes of operation.
+
+§ API implementation.
+
+§ Experiments must be conducted to determine the accuracy of the control system as well as the uncertainty in the measurements for reliable operations
+
+§ The areas of Backlash and Limit switches must be addressed in case of the servo mechanisms with couplings.
+
+§ The PCB design must be addressed with EMI acceptance /rejection levels
+
+Working Principle and Design of the Hybrid System
+
+Navigation based systems are the systems which are used to provide accurate position of the time varying object in space and attitude with the help of Intrinsic sensors like gyro, magnetometers, odometers etc and Extrinsic sensors like Laser scanners, Vision camera etc. The Optimum systems operation is ensured when the Absolute and Relative Positioning techniques are combined with a robust algorithm to reduce the inherent errors for fail proof operations of the system.
+
+Operating Modes
+
+The system shall operate in 3 modes independently and in a Hybrid Mode.
+
+1.     High speed Tracker Mode with Camera enabled Vision System
+
+2.     Inertial Navigation Mode with a DAQ based sensor acquired Data
+
+3.     Lidar based Scanning Mode for terrain mapping system
+
+4.     GPS Mode
+
+5.     Hybrid Mode
+
+The system operates in 4 modes of operation, High speed tracker Mode which provides night vision support using camera based terrain monitoring for guidance and control. Second mode of operation will be DAQ based INS Mode equipped with sensor control circuitry to analyse and map the exact location and velocity of a moving object which further can be put up on the HMI display along with the GPS system for precise location services. Third mode of operation is the Lidar scanning Mode, which uses the scanning technique for mapping the terrains when the GPS Signals are jammed or GPS denied environments for safer flight dynamics. Lastly the HYBRID Mode of operation uses all the 4 techniques combined with a powerful Algorithm to use the above 3 models for the optimum performance of the navigation system. In this mode of operation, the algorithm gathers the GPS based data to find the location and time based on the inputs received and this data is further correlated with the INS System for precision check. The set of data if lies within the marginal error brackets, it’s then sent to the third iteration to compare with the Lidar scan data. Once the data is correlated it’s further analysed for machine vision techniques for compliance.
+
+Drive Electronics & Communication Interface Module
+
+The positioner module shall implement its servo control loops using a powerful multiprocessor capability or complex combo processor for graphics processing and math calculations with sufficient memory for future enhancement of capabilities. Suitable DC brushless servomotors can be employed with fail safe brakes to meet the requirements.
+
+The Steering Module system shall implement a standard, dual redundant Remote Terminal (RT) interface. This interface will be used by the Master controller to command, control and retrieve the azimuth, elevation updates and GPS results from the module. The system shall enter ready state after Power ON with minimum delay and shall be ready for data transfer on 1555B bus in specified time limit or any other standard bus. The message formats used can be further encrypted and decrypted when communicating to the ground stations.
+
+The Master controller Unit has to be assembled inside the housing designed to withstand the scanner environmental specifications including EMI specifications for operations in hazardous terrains. It incorporates power supply module for operation of motors and controllers, tracker, DAQ system, GPS unit and INS unit. The electronics card shall be distributed on one PCB and it shall take the shape of the housing structure to make it compact. The Master controller Unit generates commands for position, velocity and acceleration for various modes of operation. The communication interface maintains communication with Master controller Unit and also within built servo controller Module and the Aircraft Cockpit Module. The Steering Unit shall have a rotary joint/appropriate joint to interface and connect the communication channels, RF, and Power to the rotating payload and integrate it as part of the steering module.
+
+Human Machine Interface
+
+The User Interface requirement ensures the monitoring and control through inputs in the form of predesigned values or the joystick commands as per the guidelines.
+
+Functional Requirements
+
+The functional requirements of the system were split into the following sections:
+
+Control Circuitry
+
+The control circuitry built for the Hybrid System must be able to:
+
+1. Receive a digital input from the computer.
+
+2. Use this data to control the speed and direction of the motors/actuators
+
+3. Provide the optimum Navigation Solution by the Algorithm Implementation Method
+
+4. Allow the mode of operation as per the command input.
+
+5. Operate on the designed power supply.
+
+Application Program Interface
+
+The API programmed for the System must contain:
+
+1. A public initialization method to set up the DAQ Card and the data port used to connect to
+
+   the control hardware.
+
+2. Private methods to retrieve position and speed information from the System for each mode of operation.
+
+3. Private methods to control the mode of the system by outputting the relevant data to
+
+   Control hardware overriding the hard coded algorithm
+
+4. Public methods to read information about the position and speed of the system on each of its mode of operation
+
+Mathematical Model Design
+
+Assuming a certain Frame of Reference for the mathematical Calculations, the masses of the objects largely governs the laws of the motion when it comes to the Steering Applications. In a Composite System where the Laser Applications are involved, the efficiency of the overall functioning of the System depends on the dynamics of the steering systems, the accuracy of the GPS device, the resolution of the DAQ system etc.
+
+Each of the modules can be modelled as independent units in the control system design. All the modules can be taken as a subsystem design with parameters. The open loop and closed loop models can be derived using the time domain and frequency domain analysis. Compensation techniques shall be applied for achieving the required bandwidth and stability of the system. The State Space Model is derived by knowing all the varying parameters of each of the modules independently.
+
+ Control System Specifications for the Hybrid System
+
+§ Closed loop bandwidth
+
+§ Stabilization loop bandwidth
+
+§ Gain margin
+
+§ Phase margin
+
+§ Controller Type
+
+§ Disturbance Spectrum
+
+The Lidar method is used how to detect the intruding plane and find nearby obstacles in 3-D Lidar data. This process can facilitate drivable path planning for vehicle navigation in the areas of low visibility and weak gps signals. The system is further complimented by the vision based algorithm using high speed camera tracker daq module. The System modelling has to be done for the transient and steady state analysis using Algorithms like KF, EKF, UKF and PF.
+
+System Design Flow
+
+ § Modelling
+
+§ Identification
+
+§ Tuning
+
+§ Optimization
+
+§ Feed forward Block
+
+§ Feedback Block
+
+§ Estimation and Navigation
+
+§ User Interface
+
+§ Diagnostics and system self-test
+
+§ System level logic, mode change and Controller Design
+
+Extended/Unscented Kalman Filter Theory for design and analysis of the Non Linear State Estimations in the modelling of Aerodynamics governed be Multi Sensor Integrated Hybrid Systems for Navigation System Design. This technique is based on Predicting Method and Updating Method to find the Optimal Solution in the Estimation theory. Once the System is Modeled using the Vectors, the next step would be to calculate the prediction model and update the next set of values in the update model.
+
+Kalman Filter Overview
+
+The Multi – mode Hybrid Integrated System design gives an Optimal Solution when different sensors fusion is implemented for the final value state.
+
+Consider a State Space Model of an Integrated Environment where the different states are
+
+Sensor Block 1
+
+Sensor Block 2
+
+Sensor Block 3
+
+Sensor Block 4
+
+Where each one corresponds to Mode
+
+GPS Mode
+
+INS Mode
+
+High Speed Tracker Mode
+
+Lidar Scanner Mode
+
+System Architecture
+
+ System Architecture Overview
+
+If the Aircraft dynamics have to be modeled as State Vectors like Altitude, Velocity, Direction. The State Vectors can be Altitude, Velocity, and Direction etc
+
+In a Multi-sensor environment to function as an Integrated System, each of the modules can be used to determine the final state or the next state of the system more accurately than compared to single sensor dependent environment. Once the system is designed and modelled appropriately, the different sensor data can be fused to have the prediction and updating model based on the outputs.
+
+Analysis involves of designing multiple sensor based non linear inputs for modelling the State Space Observation Vectors. Here, each of the Sensor Modules can be contributing in the calculating the Next state of a same quantity. Example: GPS provides the altitude using the co-ordinate system and similarly the Lidar Scanner System provides the Altitude by using Laser Technique of Ranging Analysis. The Modelling Equation further must include all the parameters responsible for the change in the Final Value of the State.
+
+ Future Scope:
+
+The Navigation System are popularly applied in situations that require a precision positioning. In most of the applications, the GPS technology is adopted to locate precisely. Extensive researches have been carried out to improve the overall performance of Navigation System by different methods. Most of the control strategies depend on reliable sensor measurements and the Controller Design. However, these sensors are usually affected by failures such as offsets, drift, lag and disconnection, which would obviously result in overall performance deterioration and sometimes irrecoverable damages. Therefore, it is desirable to develop a fault proof, reliable and high precision Navigation System scheme and scheme which in conjunction with the suitable complementing technologies enhance the performance of the Navigation Systems.
+
+In addition, most sensors and actuators have moving parts and life limited components. Another challenge is determining whether the redundant sensors could be kept powered only when required and to analyse the delays in the sensor data involving acquisition and processing and also the locking system on the parameters calculated with the best combination of operational modes after precise calculations without drifts once the mapping is done.
+
+Conclusion
+
+This proposal  puts forth the idea of an Integrated Navigation System for robust and fail proof operations in the terrains with GPS denied signals. The system design incorporates the powerful Algorithm for integrating GPS module data, INS DAQ data, High speed tracker data and a combined Hybrid Model for iterations to make the system performance optimum and fail proof with the combined features. Summation Effects are greater than the Individual contributing sensor when combined with advanced processing algorithms.
