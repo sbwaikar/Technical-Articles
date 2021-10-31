@@ -1,0 +1,70 @@
+Fast Steering Mirrors
+
+FSMs are high speed solid state piezo electric drives for a faster response in the beam stabilisation activities like scanning, tracking, beam centring and drift cancellation and line of sight corrections in the  laser applications which require high degree of precision. For a given, Frame of Reference to model a physical quantity and for the analysis in the Mathematical Modelling, the physical quantity like mass of the object is dominant and considered in analysing the Newtonian laws of the motion when it comes to the Steering Applications. In a Complex System where the Laser Beam units are used for targeting or locking applications, the performance of the System depends on various factors such as selection of the sensor module, precision required, form factor, the dynamics involved and also the end application of the steering systems. For the given Inertial Frame of Reference, if the object has to be moved by certain angle either horizontally or vertically, a force has to be applied. With smaller mirrors used for steering the Laser hitting at the appropriate targets for a given fixed momentum, the speeds are higher at which the FSM’s can be moved as compared to the huge masses. Hence the overheads involved in the Light coming from the source to the target can be greatly minimised by these special devices called FSM’s.
+
+Angular Beam Steering:
+
+For any Laser Steering System to function to its highest capacity requires the control units, Input Output Systems to be operational with least delays and also when the Steering functionality i.e. the control unit to move  the beam pointing in the azimuth or elevation is done at the earliest with minimum delay of the incoming or the outgoing beam. The Mechanics of the any System are defined by the Degrees of Freedom to be described in Space in 3 dimensions. For any given dynamic system, which involves movement of Mirrors, the alignments are easier if the degrees of freedom are not dependent on each other and controlled independently. Shown below is an example of FSM on a Sensor Target.
+
+Different Mechanisms to adjust beam angle:
+
+·      Fast steering mirrors
+
+·      Riley prisms
+
+·      Electromechanical Actuators
+
+Range of Angle of the Incoming and Outgoing Laser Beam:
+
+The FSMs are mounted on the Actuators and they are capable of producing Fast and Accurate Movements for Laser Beam Steering. The centre of the mirror is the centre of the Actuator and tilting functionality around the axis is realized. The FSM changes by an angle proportional to the reference axis as driven by the actuator. The relation that governs the mechanical angle of the output beam is two times the angle subtended by  the input laser beam on the x axis or y axis of the XY plane. Some of the methods used for Beam Steering Operations are: 
+
+·      Fast steering mirrors
+
+·      Riley prisms
+
+·      Electromechanical Actuators
+
+The Active Mirrors for Beam Steering Applications can be
+
+ Piezo mirrors
+ Piezo driven screw mirrors
+ Stepper/Servo motors driven mirrors
+ Galvometric scanning mirrors
+ Voice coil actuated scanning mirrors
+Working Principle and Design:
+
+The modules required for the implementation of a beam stabilizer/steering system consists of a FSM, actuator unit, beam source, beam-splitter, position sensing detector and closed loop controller mechanism. The Input laser beam hits the FSM and is reflected to the beam-splitter. A beam splitter as the name suggests is an optical component which splits the input laser beam into 2 or more parts as per the requirement. The beams can have different optical power which depends on the selection type of the material, the surface; type of splitter used etc. The energy is diverted from the beam splitter to the sensor unit like Quad Cell. Once the Laser is spotted on either of the quadrants, it creates appropriate signals for the control circuitry to bring it back to the centre. This drifting is scanned and accordingly, tip or tilt motions are triggered. Feedback from the quad cell which is the calibrated values of the Azimuth and Elevation data are used to drive the controls to the FSM for the tip movement or the tilt movement or both to bring the beam to the centre of the quad cell. The purpose of the tip or tilt motion of the FSM is to lock the beam fixed at the target. The factors contributing to the dynamic movement control are set by the parameters of the steering control units, the sensor units, and optical source used. The Control System receives the Voltage Commands from the Outputs of the Position Sensors and Convert them into Driving Currents for the Actuator Modules after the Position Sensing. This movement further provides the required change in tip or tilt angle as per the calibration done.
+
+Conclusion:
+
+This Article gives an insight to the FSM’s which is the heart of any precision optical Laser Beam Steering/Centring System. The Design of such systems finds an essential place in solutions to maximize the accuracy of the Instrument.  The processed data can be visualized on the HMI display for the end user application to know the point after the Beam Stabilization or Centring using the method of sensor data display scheme collected by (PSD) Position Sensor Detection Unit.
+
+Future Scope:
+
+The fast steering mirror (FSM) system is popularly applied in applications that require a precision positioning, such as
+
+·      Space telescopes for Astronomy
+
+·      Scanners for Energy Sectors
+
+·      Tracking Targets
+
+·      Advanced surgeries
+
+·      Beam Centring Units
+
+·      Image stabilization techniques
+
+·      Space Communication Units
+
+·      Nanoscopy
+
+·      Laser Cavity Tuning
+
+·      Precision Laser Welding
+
+·      Aerospace and Defence Applications and many more.
+
+FSM is an essential component of any beam steering and centring equipment, generally used for the precision related, critical applications. Being an extensive research area, experiments have been widely carried out by organisations across the globe specific to their applications, to improve the closed-loop performance of FSM by adopting different techniques. Most of the control strategies depend on reliable sensor measurements and the Controller Design. However, these sensors are usually affected by factors such as offsets, drift, and slew rates, settling times and disconnection, which could affect the overall performance of the System. Therefore, it is desirable to develop a fault proof, reliable and high precision sensor detection scheme and locking scheme which in conjunction with the suitable components and Control Design Techniques, improves the performance of the FSM based systems.
+
+In addition, most sensors and actuators have moving parts and life limited components. Another challenge is determining whether the redundant sensors could be kept powered only when required and to analyse the delays in the sensor data involving acquisition and processing and also the locking system on the target when the Laser pointing is precisely done by freezing the actuator parameters to be on the target without any drifts. Next point to be considered can be on the Power requirements of the modules once the beam centeroid is detected. Low Power areas can addressed by making control circuitry modules working in the minimal modes such as sleep mode or making actuator modules redundant in functioning till the wakeup call from the Sensor Detection module.
